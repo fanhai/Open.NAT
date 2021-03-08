@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net35;net45;net472</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net45;net472</TargetFrameworks>
     <Platforms>AnyCPU;x64;x86</Platforms>
     <PackageId>Open.Nat</PackageId>
     <Authors>Alan McGovern, Ben Motmans, Lucas Ontivero</Authors>
@@ -10,7 +10,7 @@
     <Description>.NET Library for automatic network address translation</Description>
     <NeutralLanguage>en</NeutralLanguage>
     <Copyright>Copyright Alan McGovern, Ben Motmans, Lucas Ontivero ©  2006-2014</Copyright>
-    <Version>2.1.0.0</Version>
+    <Version>2.1.0.1</Version>
     <FileVersion>1.0.1.0</FileVersion>
     <OutputType>Library</OutputType>
     <StartupObject />
@@ -21,6 +21,7 @@
     <AssemblyOriginatorKeyFile>Open.Nat.snk</AssemblyOriginatorKeyFile>
     <RepositoryUrl>https://github.com/lontivero/Open.NAT</RepositoryUrl>
     <RepositoryType>Github</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)'!='netstandard2.0'">
     <Reference Include="System" />
@@ -35,8 +36,5 @@
   <ItemGroup>
     <Compile Remove="Upnp\Messages\Responses\AddPortMappingResponseMessage.cs" />
     <Compile Remove="Upnp\Messages\Responses\DeletePortMappingResponseMessage.cs" />
-  </ItemGroup>
-   <ItemGroup>
-    <PackageReference Include="TaskParallelLibrary" Version="1.0.2856.0" Condition="'$(TargetFramework)'=='net35'" />
   </ItemGroup>
 </Project>
